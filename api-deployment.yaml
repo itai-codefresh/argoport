@@ -21,4 +21,7 @@ spec:
             - containerPort: 2020
           env:
             - name: GIT_TOKEN
-              value: 1dbc0b8c1c47db182420d072d20fc8da160b821d
+              valueFrom:
+                secretKeyRef:
+                  name: github
+                  key: username.txt
