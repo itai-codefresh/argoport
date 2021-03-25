@@ -18,4 +18,7 @@ spec:
         - name: argoport-api
           image: itaicodefresh/argoport-api:main
           ports:
-            - containerPort: 8080
+            - containerPort: 2020
+          env:
+            - name: GIT_TOKEN
+              value: 1dbc0b8c1c47db182420d072d20fc8da160b821d
