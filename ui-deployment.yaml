@@ -1,5 +1,4 @@
 apiVersion: apps/v1
-namespace: argoport
 kind: Deployment
 metadata:
   name: argoport-ui
