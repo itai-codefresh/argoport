@@ -17,6 +17,7 @@ spec:
       containers:
         - name: argoport-api
           image: itaicodefresh/argoport-api:main
+          imagePullPolicy: Always
           ports:
             - containerPort: 2020
           env:

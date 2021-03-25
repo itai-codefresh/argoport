@@ -17,5 +17,6 @@ spec:
       containers:
         - name: argoport-ui
           image: itaicodefresh/argoport-ui:main
+          imagePullPolicy: Always
           ports:
             - containerPort: 4200
