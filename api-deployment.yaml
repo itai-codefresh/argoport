@@ -2,8 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: argoport-api
+  labels:
+    app: argoport-api
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: argoport-api
   template:
     metadata:
       labels:
@@ -13,4 +18,4 @@ spec:
         - name: argoport-api
           image: itaicodefresh/argoport-api:main
           ports:
-            - containerPort: 2020
+            - containerPort: 8080
