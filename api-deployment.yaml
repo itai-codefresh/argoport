@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: argoport-api
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: argoport-api
+    spec:
+      containers:
+        - name: argoport-api
+          image: itaicodefresh/argoport-api:main
+          ports:
+            - containerPort: 2020
